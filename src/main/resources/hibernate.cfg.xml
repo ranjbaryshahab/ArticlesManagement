@@ -13,6 +13,9 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Mapping -->
+        <mapping class="ir.maktab.java32.projects.articlesmanagement.model.Article"/>
+        <mapping class="ir.maktab.java32.projects.articlesmanagement.model.User"/>
+        <mapping class="ir.maktab.java32.projects.articlesmanagement.model.Category"/>
 
     </session-factory>
 </hibernate-configuration>

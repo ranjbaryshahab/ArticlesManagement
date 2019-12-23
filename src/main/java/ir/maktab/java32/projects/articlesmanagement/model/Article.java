@@ -17,13 +17,13 @@ public class Article {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "title", length = 30)
+    @Column(name = "title", length = 30, nullable = false)
     private String title;
 
-    @Column(name = "brief", length = 15)
+    @Column(name = "brief", length = 15, nullable = false)
     private String brief;
 
-    @Column(name = "content", length = 254)
+    @Column(name = "content", length = 254, nullable = false)
     private String content;
 
     @Column(name = "create_date")
@@ -37,4 +37,7 @@ public class Article {
 
     @Column(name = "isPublished")
     private Boolean isPublished;
+
+    @ManyToOne
+    private Category category;
 }

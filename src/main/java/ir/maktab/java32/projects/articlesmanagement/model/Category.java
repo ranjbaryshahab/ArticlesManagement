@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -21,4 +22,7 @@ public class Category {
 
     @Column(name = "description", nullable = false, length = 150)
     private String description;
+
+    @OneToMany
+    private List<Article> articleList;
 }

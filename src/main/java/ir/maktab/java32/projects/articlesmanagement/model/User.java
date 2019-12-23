@@ -20,10 +20,10 @@ public class User {
     @Column(name = "username", unique = true, nullable = false, length = 25)
     private String username;
 
-    @Column(name = "national_code", unique = true, nullable = false, length = 25)
+    @Column(name = "national_code", nullable = false, length = 25)
     private String nationalCode;
 
-    @Column(name = "birthday", nullable = false)
+    @Column(name = "birthday")
     private Date birthday;
 
     @Column(name = "password", nullable = false)

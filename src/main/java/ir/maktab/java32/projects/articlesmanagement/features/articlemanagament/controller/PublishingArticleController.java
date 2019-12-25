@@ -3,5 +3,5 @@ package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.
 import ir.maktab.java32.projects.articlesmanagement.model.Article;
 
 public interface PublishingArticleController {
-    Article publish(Article article);
+    void publish(Article article);
 }

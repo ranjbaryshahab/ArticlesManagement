@@ -5,17 +5,18 @@ import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.u
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.EditArticleByUserUseCase;
 import ir.maktab.java32.projects.articlesmanagement.model.Article;
 
+import java.util.Date;
+
 public class PublishingArticleControllerImpl implements PublishingArticleController {
     @Override
-    public Article publish(Article article) {
+    public void publish(Article article) {
         EditArticleByUserUseCase editArticleByUserUseCase = new EditArticleByUserUseCaseImpl();
-        Article editArticle = null;
         try {
             article.setIsPublished(true);
-            editArticle = editArticleByUserUseCase.edit(article);
+            article.setPublishDate(new Date());
+            editArticleByUserUseCase.edit(article);
         } catch (EditArticleByUserUseCase.EditArticleByUserFailedException e) {
             System.out.println(e.getMessage());
         }
-        return editArticle;
     }
 }

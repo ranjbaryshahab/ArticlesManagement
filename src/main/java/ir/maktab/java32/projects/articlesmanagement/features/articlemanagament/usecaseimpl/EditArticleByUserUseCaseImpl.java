@@ -8,9 +8,6 @@ import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.u
 import ir.maktab.java32.projects.articlesmanagement.model.Article;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
-
-import java.util.List;
 
 @Service
 @SuppressWarnings({"Duplicates", "unchecked"})
@@ -34,20 +31,10 @@ public class EditArticleByUserUseCaseImpl implements EditArticleByUserUseCase {
         Session session = sessionFactory.openSession();
         CrudGenericImpl.setSession(session);
         CrudGenericImpl.getSession().beginTransaction();
-        Query query = session.createQuery("update Article set title=:title , brief=:brief , content=:content , createDate=:createDate , publishDate=:publishDate, lastUpdateDate=:lastUpdateDate , category=:category where id=:id and user=:user");
-        query.setParameter("title", article.getTitle());
-        query.setParameter("brief", article.getBrief());
-        query.setParameter("content", article.getContent());
-        query.setParameter("createDate", article.getCreateDate());
-        query.setParameter("publishDate", article.getPublishDate());
-        query.setParameter("lastUpdateDate", article.getLastUpdateDate());
-        query.setParameter("category", article.getCategory());
-        query.setParameter("user", article.getUser());
-        query.setParameter("id", article.getId());
-        List<Article> editArticle = query.list();
+        Article updateArticle = crudGeneric.update(article);
         CrudGenericImpl.getSession().getTransaction().commit();
         CrudGenericImpl.getSession().close();
-        return editArticle.get(0);
+        return updateArticle;
     }
 
     private void validate(Article article) throws EditArticleByUserFailedException {

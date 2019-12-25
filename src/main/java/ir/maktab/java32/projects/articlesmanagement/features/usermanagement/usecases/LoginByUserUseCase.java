@@ -5,7 +5,7 @@ import ir.maktab.java32.projects.articlesmanagement.model.User;
 
 @UseCase
 public interface LoginByUserUseCase {
-    User login(User user) throws LoginByUserFailedException;
+    User login(String username, String password) throws LoginByUserFailedException;
 
     class LoginByUserFailedException extends Exception {
 

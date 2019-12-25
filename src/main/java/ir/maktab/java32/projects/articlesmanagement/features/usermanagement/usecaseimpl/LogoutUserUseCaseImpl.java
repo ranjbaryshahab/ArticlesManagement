@@ -8,7 +8,7 @@ import ir.maktab.java32.projects.articlesmanagement.model.User;
 @Service
 public class LogoutUserUseCaseImpl implements LogoutByUserUseCase {
     @Override
-    public User logout(User user) {
+    public User logout() {
         return null;
     }
 }

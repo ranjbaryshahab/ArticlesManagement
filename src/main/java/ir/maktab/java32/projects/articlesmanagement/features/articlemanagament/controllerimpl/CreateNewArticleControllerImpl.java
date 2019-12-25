@@ -5,7 +5,7 @@ import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.u
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.CreateArticleByUserUseCase;
 import ir.maktab.java32.projects.articlesmanagement.model.Article;
 
-public class CreateNewControllerImpl implements CreateNewArticleController {
+public class CreateNewArticleControllerImpl implements CreateNewArticleController {
     @Override
     public Article create(Article article) {
         CreateArticleByUserUseCase createArticleByUserUseCase = new CreateArticleByUserUseCaseImpl();

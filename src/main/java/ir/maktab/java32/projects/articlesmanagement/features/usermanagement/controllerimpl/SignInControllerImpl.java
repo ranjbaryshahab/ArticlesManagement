@@ -7,13 +7,13 @@ import ir.maktab.java32.projects.articlesmanagement.model.User;
 
 public class SignInControllerImpl implements SignInController {
     @Override
-    public User signIn(User user) {
+    public User signIn(String username,String password) {
         LoginByUserUseCase loginByUserUseCase = new LoginByUserUseCaseImpl();
         User singIn = null;
         try {
-            singIn = loginByUserUseCase.login(user);
+            singIn = loginByUserUseCase.login(username,password);
         } catch (LoginByUserUseCase.LoginByUserFailedException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage()+"3");
         }
         return singIn;
     }

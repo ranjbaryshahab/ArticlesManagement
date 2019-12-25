@@ -23,6 +23,6 @@ public class Category {
     @Column(name = "description", nullable = false, length = 150)
     private String description;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "category")
     private List<Article> articleList;
 }

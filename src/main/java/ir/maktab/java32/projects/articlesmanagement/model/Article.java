@@ -3,14 +3,17 @@ package ir.maktab.java32.projects.articlesmanagement.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@ToString
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,8 +42,10 @@ public class Article {
     private Boolean isPublished;
 
     @ManyToOne
+    @ToString.Exclude
     private Category category;
 
     @ManyToOne
+    @ToString.Exclude
     private User user;
 }

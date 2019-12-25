@@ -15,33 +15,36 @@ import java.util.List;
 @SuppressWarnings("unchecked")
 public class LoginByUserUseCaseImpl implements LoginByUserUseCase {
     @Override
-    public User login(User user) throws LoginByUserFailedException {
+    public User login(String username, String password) throws LoginByUserFailedException {
         User userLogin;
         try {
-            validate(user);
-            userLogin = userLogin(user);
+            validate(username, password);
+            userLogin = userLogin(username, password);
         } catch (LoginByUserFailedException e) {
             throw new LoginByUserFailedException(e.getMessage());
         }
         return userLogin;
     }
 
-    private User userLogin(User user) {
+    private User userLogin(String username, String password) {
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.openSession();
         CrudGenericImpl.setSession(session);
         CrudGenericImpl.getSession().beginTransaction();
         Query query = session.createQuery("from User where username=:username and password=:password");
-        query.setParameter("username", user.getUsername());
-        query.setParameter("password", user.getPassword());
+        query.setParameter("username", username);
+        query.setParameter("password", password);
         List<User> loginUser = query.list();
         CrudGenericImpl.getSession().getTransaction().commit();
         CrudGenericImpl.getSession().close();
+        if(loginUser==null){
+            return null;
+        }
         return loginUser.get(0);
     }
 
-    private void validate(User user) throws LoginByUserFailedException {
-        if (userLogin(user) == null)
+    private void validate(String username, String password) throws LoginByUserFailedException {
+        if (userLogin(username, password) == null)
             throw new LoginByUserFailedException("Username or password is incorrect !");
     }
 }

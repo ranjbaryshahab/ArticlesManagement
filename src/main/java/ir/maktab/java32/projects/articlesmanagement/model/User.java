@@ -30,6 +30,6 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "user")
     private List<Article> articleList;
 }

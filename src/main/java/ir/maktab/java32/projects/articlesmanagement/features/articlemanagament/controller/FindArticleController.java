@@ -2,6 +2,6 @@ package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.
 
 import ir.maktab.java32.projects.articlesmanagement.model.Article;
 
-public interface CancelPublishingArticleController {
-    void cancel(Article article);
+public interface FindArticleController {
+    Article find(int id);
 }

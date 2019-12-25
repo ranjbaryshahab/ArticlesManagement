@@ -3,5 +3,5 @@ package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.con
 import ir.maktab.java32.projects.articlesmanagement.model.User;
 
 public interface SignInController {
-    User signIn(User user);
+    User signIn(String username, String password);
 }

@@ -1,19 +1,17 @@
 package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecaseimpl;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Service;
-import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.HibernateUtil;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGeneric;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGenericImpl;
+import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.EditArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import ir.maktab.java32.projects.articlesmanagement.repositories.ArticleRepository;
 
 @Service
 @SuppressWarnings({"Duplicates", "unchecked"})
 public class EditArticleByUserUseCaseImpl implements EditArticleByUserUseCase {
-    CrudGeneric<Article, Integer> crudGeneric = new CrudGenericImpl<>(Article.class);
-
+    private ArticleRepository articleRepository = ArticleRepository.getInstance();
+    private User user = AuthenticationService.getInstance().getLoginUser();
     @Override
     public Article edit(Article article) throws EditArticleByUserFailedException {
         Article editArticle;
@@ -27,14 +25,7 @@ public class EditArticleByUserUseCaseImpl implements EditArticleByUserUseCase {
     }
 
     private Article updateArticle(Article article) {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        CrudGenericImpl.setSession(session);
-        CrudGenericImpl.getSession().beginTransaction();
-        Article updateArticle = crudGeneric.update(article);
-        CrudGenericImpl.getSession().getTransaction().commit();
-        CrudGenericImpl.getSession().close();
-        return updateArticle;
+        return articleRepository.update(article);
     }
 
     private void validate(Article article) throws EditArticleByUserFailedException {
@@ -55,6 +46,10 @@ public class EditArticleByUserUseCaseImpl implements EditArticleByUserUseCase {
 
         if (article.getContent().length() > 254)
             throw new EditArticleByUserFailedException("Content is bigger than 254 characters");
+
+        if (article.getUser().getUsername().equals(user.getUsername()))
+            throw new EditArticleByUserFailedException("You can't edit this article!");
+
     }
 
 }

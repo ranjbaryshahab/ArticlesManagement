@@ -2,7 +2,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.categorymanagement
 
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controller.CreateNewCategoryController;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controllerimpl.CreateNewCategoryControllerImpl;
-import ir.maktab.java32.projects.articlesmanagement.model.Category;
+import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 
 import java.util.Scanner;
 
@@ -19,7 +19,6 @@ public class CreateCategoryView {
         System.out.println("Please enter description : ");
         newCategory.setDescription(lineScanner.nextLine());
 
-        newCategory.setArticleList(null);
         newCategory = createNewCategoryController.create(newCategory);
         return newCategory;
     }

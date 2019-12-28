@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.categorymanagement
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controller.CreateNewCategoryController;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecaseimpl.CreateCategoryByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecases.CreateCategoryByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Category;
+import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 
 public class CreateNewCategoryControllerImpl implements CreateNewCategoryController {
     @Override

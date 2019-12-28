@@ -4,7 +4,7 @@ import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationSer
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.LogoutController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecaseimpl.LogoutUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.LogoutByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 public class LogoutControllerImpl implements LogoutController {
     @Override

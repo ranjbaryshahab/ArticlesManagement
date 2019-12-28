@@ -6,7 +6,7 @@ import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.c
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controllerimpl.EditUserArticleControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controllerimpl.FindArticleControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.view.CreateCategoryView;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 
 import java.util.Date;
 import java.util.Scanner;

@@ -2,7 +2,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.vie
 
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.SignUpController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.SignUpControllerImpl;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,8 +15,6 @@ public class SignUpView {
     public void signUp() {
         System.out.println("Please enter username : ");
         String username = lineScanner.nextLine();
-        System.out.println("Please enter password : ");
-        String password = lineScanner.nextLine();
         System.out.println("Please enter nationalCode : ");
         String nationalCode = lineScanner.nextLine();
         System.out.println("Please enter birthday for example(23/4/1996) ");
@@ -27,7 +25,7 @@ public class SignUpView {
         } catch (ParseException e) {
             System.out.println(e.getMessage());
         }
-        User user = new User(null, username, nationalCode, birthday, password, null);
+        User user = new User(null, username, nationalCode, birthday, nationalCode);
         SignUpController signUpController = new SignUpControllerImpl();
         signUpController.signUp(user);
     }

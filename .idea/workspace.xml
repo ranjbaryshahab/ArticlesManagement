@@ -2,45 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c078da29-f5b8-4ea4-ae2b-b024b0e8f555" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/utilities/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/FindArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/FindArticleControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/AllArticleListView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/CancelPublishingArticleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/CreateNewArticleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/EditUserArticleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/PublishingArticleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/UserArticleListView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/AllCategoryListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/FindCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/AllCategoryListControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/FindCategoryControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/view/AllCategoryListView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/view/CreateCategoryView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/view/FindCategoryView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controller/LogoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/LogoutControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/ChangePasswordView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/SignInView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/SignUpView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/config/hibernate/repositories/CrudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/repositories/ArticleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/repositories/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/ArticlesManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/ArticlesManagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/utilities/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/utilities/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/config/hibernate/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/config/hibernate/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/share/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/share/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/share/CrudGeneric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/core/share/CrudGenericImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/AllArticleListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/AllArticleListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/CancelPublishingArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/CancelPublishingArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/CreateNewArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/CreateNewArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/EditUserArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/EditUserArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/FindArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/FindArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/PublishingArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/PublishingArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/UserArticleListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controller/UserArticleListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/AllArticleListControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/AllArticleListControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/CancelPublishingArticleControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/CancelPublishingArticleControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/CreateNewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/CreateNewArticleControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/CreateNewArticleControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/CreateNewArticleControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/EditUserArticleControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/EditUserArticleControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/FindArticleControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/FindArticleControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/PublishingArticleControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/PublishingArticleControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/UserArticleListControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/controllerimpl/UserArticleListControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/CreateArticleByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/CreateArticleByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/DeleteArticleByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/DeleteArticleByUserUseCaseImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/EditArticleByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/EditArticleByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/FindAllArticleByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/FindAllArticleByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/FindArticleByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecaseimpl/FindArticleByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/CreateArticleByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/CreateArticleByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/EditArticleByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/EditArticleByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/FindAllArticleByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/FindAllArticleByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/FindArticleByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/usecases/FindArticleByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/CancelPublishingArticleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/CancelPublishingArticleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/CreateNewArticleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/CreateNewArticleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/EditUserArticleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/EditUserArticleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/PublishingArticleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/PublishingArticleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/UserArticleListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/articlemanagament/view/UserArticleListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/AllCategoryListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/AllCategoryListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/CreateNewCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/CreateNewCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/FindCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controller/FindCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/AllCategoryListControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/AllCategoryListControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/CreateNewCategoryControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/CreateNewCategoryControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/FindCategoryControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/controllerimpl/FindCategoryControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/CreateCategoryByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/CreateCategoryByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/DeleteCategoryByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/DeleteCategoryByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/EditCategoryByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/EditCategoryByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/FindAllCategoryByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/FindAllCategoryByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/FindCategoryByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecaseimpl/FindCategoryByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/CreateCategoryByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/CreateCategoryByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/EditCategoryByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/EditCategoryByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/FindAllCategoryByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/FindAllCategoryByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/FindCategoryByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/usecases/FindCategoryByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/view/CreateCategoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/view/CreateCategoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/view/FindCategoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/categorymanagement/view/FindCategoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controller/ChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controller/ChangePasswordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controller/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controller/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/ChangePasswordControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/ChangePasswordControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/LogoutControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/LogoutControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/SignInControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/SignInControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/SignUpControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/controllerimpl/SignUpControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/CreateAccountByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/CreateAccountByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/DeleteAccountByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/DeleteAccountByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/EditAccountByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/EditAccountByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/FindAccountByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/FindAccountByUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/FindAllAccountByAdminUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/FindAllAccountByAdminUseCaseImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/LoginByUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/LoginByUserUseCaseImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/LogoutUserUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecaseimpl/LogoutUserUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/CreateAccountByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/CreateAccountByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/EditAccountByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/EditAccountByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/FindAccountByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/FindAccountByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/FindAllAccountByAdminUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/FindAllAccountByAdminUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/LoginByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/LoginByUserUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/LogoutByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/usecases/LogoutByUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/ChangePasswordView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/ChangePasswordView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/SignInView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/SignInView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/SignUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/features/usermanagement/view/SignUpView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/domain/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,25 +165,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Task/Shahab_Ranjbary_HW6_Maktab32/ScholarshipManagement" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ir.maktab.java32.projects.articlesmanagement.features.articlemanagement.usecases" />
-      <recent name="ir.maktab.java32.projects.articlesmanagement.core.anotations" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ir.maktab.java32.projects.articlesmanagement.repositories" />
       <recent name="ir.maktab.java32.projects.articlesmanagement.core" />
       <recent name="ir.maktab.java32.projects.articlesmanagement.core.config.hibernate" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/ir/maktab/java32/projects/articlesmanagement/dao" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ir.maktab.java32.projects.articlesmanagement.features.articlemanagement.usecases" />
+      <recent name="ir.maktab.java32.projects.articlesmanagement.core.anotations" />
     </key>
   </component>
   <component name="RunManager">
@@ -194,7 +237,9 @@
       <workItem from="1577262021596" duration="5717000" />
       <workItem from="1577285916852" duration="83000" />
       <workItem from="1577286313582" duration="8623000" />
-      <workItem from="1577298334782" duration="7964000" />
+      <workItem from="1577298334782" duration="9220000" />
+      <workItem from="1577336788816" duration="5005000" />
+      <workItem from="1577552827023" duration="8847000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1576963411134</created>
@@ -224,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577263001862</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="The articleManagement, categoryManagement and userManagement views have been added to the program finally completed program.">
+      <created>1577306341419</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577306341420</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +300,8 @@
     <MESSAGE value="hibernate was configured and three entity class was created." />
     <MESSAGE value="The articleManagement, categoryManagement and userManagement features have been added to the program." />
     <MESSAGE value="The articleManagement, categoryManagement and userManagement controllers have been added to the program." />
-    <option name="LAST_COMMIT_MESSAGE" value="The articleManagement, categoryManagement and userManagement controllers have been added to the program." />
+    <MESSAGE value="The articleManagement, categoryManagement and userManagement views have been added to the program finally completed program." />
+    <option name="LAST_COMMIT_MESSAGE" value="The articleManagement, categoryManagement and userManagement views have been added to the program finally completed program." />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="58" key="#Project_Structure" timestamp="1577019025396">
@@ -263,46 +316,46 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="292" y="27" width="772" height="651" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.27.1366.741@0.27.1366.741" timestamp="1576964941971" />
-    <state x="491" y="100" width="544" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1577299777140">
+    <state x="491" y="100" width="544" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1577555724815">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="491" y="100" width="544" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1577299777140" />
-    <state x="0" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1577220674875">
+    <state x="491" y="100" width="544" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1577555724815" />
+    <state x="0" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1577553537124">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="0" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.27.1366.741@0.27.1366.741" timestamp="1577220674875" />
+    <state x="0" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.27.1366.741@0.27.1366.741" timestamp="1577553537124" />
     <state x="185" y="27" width="976" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577225819463">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="185" y="27" width="976" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1577225819463" />
-    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577226333620">
+    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577555621244">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1577226333620" />
-    <state x="185" y="27" width="986" height="741" key="CommitChangelistDialog2" timestamp="1577263001204">
+    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1577555621244" />
+    <state x="185" y="27" width="986" height="741" key="CommitChangelistDialog2" timestamp="1577306340877">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="185" y="27" width="986" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1577263001204" />
-    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577301359204">
+    <state x="185" y="27" width="986" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1577306340877" />
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577343289417">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1577301359204" />
-    <state width="1320" height="356" key="GridCell.Tab.0.bottom" timestamp="1577306289068">
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1577343289417" />
+    <state width="1320" height="269" key="GridCell.Tab.0.bottom" timestamp="1577562830857">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="356" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1577306289068" />
-    <state width="1320" height="356" key="GridCell.Tab.0.center" timestamp="1577306289067">
+    <state width="1320" height="269" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1577562830857" />
+    <state width="1320" height="269" key="GridCell.Tab.0.center" timestamp="1577562830856">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="356" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1577306289067" />
-    <state width="1320" height="356" key="GridCell.Tab.0.left" timestamp="1577306289067">
+    <state width="1320" height="269" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1577562830856" />
+    <state width="1320" height="269" key="GridCell.Tab.0.left" timestamp="1577562830856">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="356" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1577306289067" />
-    <state width="1320" height="356" key="GridCell.Tab.0.right" timestamp="1577306289067">
+    <state width="1320" height="269" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1577562830856" />
+    <state width="1320" height="269" key="GridCell.Tab.0.right" timestamp="1577562830857">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="356" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1577306289067" />
+    <state width="1320" height="269" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1577562830857" />
     <state width="1320" height="219" key="GridCell.Tab.1.bottom" timestamp="1577108315426">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -319,22 +372,26 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1577108315425" />
-    <state x="216" y="54" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1576972746746">
+    <state x="216" y="54" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1577556145830">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="216" y="54" width="924" height="684" key="Maven.ArtifactSearchDialog/0.27.1366.741@0.27.1366.741" timestamp="1576972746746" />
-    <state x="166" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1577019010935">
+    <state x="216" y="54" width="924" height="684" key="Maven.ArtifactSearchDialog/0.27.1366.741@0.27.1366.741" timestamp="1577556145830" />
+    <state x="166" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1577554710732">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="166" y="27" width="1024" height="741" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1577019010935" />
-    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576967046060">
+    <state x="166" y="27" width="1024" height="741" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1577554710732" />
+    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1577306356271">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1576967046060" />
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1577298333974">
+    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1577306356271" />
+    <state x="594" y="283" width="367" height="234" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1577337995532">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1577298333974" />
+    <state x="594" y="283" width="367" height="234" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.27.1366.741@0.27.1366.741" timestamp="1577337995532" />
+    <state x="593" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1577336813399">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="593" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1577336813399" />
     <state x="451" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577302496553">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -343,6 +400,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="246" y="98" width="873" height="596" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1577019076119" />
+    <state x="0" y="93" width="1356" height="605" key="new project wizard" timestamp="1577343416358">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="0" y="93" width="1356" height="605" key="new project wizard/0.27.1366.741@0.27.1366.741" timestamp="1577343416358" />
     <state x="331" y="27" width="964" height="739" key="recent.locations.popup" timestamp="1577019071091">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

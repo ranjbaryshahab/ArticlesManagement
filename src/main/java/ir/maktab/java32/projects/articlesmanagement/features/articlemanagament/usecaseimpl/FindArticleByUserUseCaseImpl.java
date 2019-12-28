@@ -1,19 +1,17 @@
 package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecaseimpl;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Service;
-import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.HibernateUtil;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGeneric;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGenericImpl;
+import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.FindArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import ir.maktab.java32.projects.articlesmanagement.repositories.ArticleRepository;
 
 @Service
 @SuppressWarnings("Duplicates")
 public class FindArticleByUserUseCaseImpl implements FindArticleByUserUseCase {
-    CrudGeneric<Article, Integer> crudGeneric = new CrudGenericImpl<>(Article.class);
-
+    private ArticleRepository articleRepository = ArticleRepository.getInstance();
+    private User user = AuthenticationService.getInstance().getLoginUser();
     @Override
     public Article findById(int id) throws FindArticleByUserFailedException {
         Article article;
@@ -27,15 +25,7 @@ public class FindArticleByUserUseCaseImpl implements FindArticleByUserUseCase {
     }
 
     private Article findArticleById(int id) {
-        Article article;
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        CrudGenericImpl.setSession(session);
-        CrudGenericImpl.getSession().beginTransaction();
-        article = crudGeneric.findById(id);
-        CrudGenericImpl.getSession().getTransaction().commit();
-        CrudGenericImpl.getSession().close();
-        return article;
+        return articleRepository.findById(id);
     }
 
     private void validateById(int id) throws FindArticleByUserFailedException {

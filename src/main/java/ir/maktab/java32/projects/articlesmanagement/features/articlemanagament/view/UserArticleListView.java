@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.
 import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controller.UserArticleListController;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controllerimpl.UserArticleListControllerImpl;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 public class UserArticleListView {
     public void list(){

@@ -1,11 +1,10 @@
-package ir.maktab.java32.projects.articlesmanagement.model;
+package ir.maktab.java32.projects.articlesmanagement.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -23,6 +22,4 @@ public class Category {
     @Column(name = "description", nullable = false, length = 150)
     private String description;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "category")
-    private List<Article> articleList;
 }

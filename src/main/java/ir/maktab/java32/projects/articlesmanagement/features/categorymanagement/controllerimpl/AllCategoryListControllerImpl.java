@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.categorymanagement
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controller.AllCategoryListController;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecaseimpl.FindAllCategoryByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecases.FindAllCategoryByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Category;
+import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 
 import java.util.List;
 

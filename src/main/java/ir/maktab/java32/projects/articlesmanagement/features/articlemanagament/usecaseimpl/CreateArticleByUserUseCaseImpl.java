@@ -1,18 +1,14 @@
 package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecaseimpl;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Service;
-import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.HibernateUtil;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGeneric;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGenericImpl;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.CreateArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import ir.maktab.java32.projects.articlesmanagement.repositories.ArticleRepository;
 
 @Service
 @SuppressWarnings("Duplicates")
 public class CreateArticleByUserUseCaseImpl implements CreateArticleByUserUseCase {
-    CrudGeneric<Article, Integer> crudGeneric = new CrudGenericImpl<>(Article.class);
+    private ArticleRepository articleRepository = ArticleRepository.getInstance();
 
     @Override
     public Article create(Article article) throws CreateArticleByUserFailedException {
@@ -28,14 +24,7 @@ public class CreateArticleByUserUseCaseImpl implements CreateArticleByUserUseCas
     }
 
     private Article insertArticle(Article article) {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        CrudGenericImpl.setSession(session);
-        CrudGenericImpl.getSession().beginTransaction();
-        Article savedArticle = crudGeneric.insert(article);
-        CrudGenericImpl.getSession().getTransaction().commit();
-        CrudGenericImpl.getSession().close();
-        return savedArticle;
+        return articleRepository.save(article);
     }
 
 

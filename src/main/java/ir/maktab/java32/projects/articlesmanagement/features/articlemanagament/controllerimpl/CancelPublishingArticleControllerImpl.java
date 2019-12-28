@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controller.CancelPublishingArticleController;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecaseimpl.EditArticleByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.EditArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 
 public class CancelPublishingArticleControllerImpl implements CancelPublishingArticleController {
     @Override

@@ -1,7 +1,7 @@
 package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controller;
 
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 import java.util.List;
 

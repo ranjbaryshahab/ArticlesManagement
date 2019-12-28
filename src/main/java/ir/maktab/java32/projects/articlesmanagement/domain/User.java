@@ -1,4 +1,4 @@
-package ir.maktab.java32.projects.articlesmanagement.model;
+package ir.maktab.java32.projects.articlesmanagement.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -30,6 +29,5 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "user")
-    private List<Article> articleList;
+
 }

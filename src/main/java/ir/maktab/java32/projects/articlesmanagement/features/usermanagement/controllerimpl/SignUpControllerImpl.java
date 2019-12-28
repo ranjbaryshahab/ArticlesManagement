@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.con
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.SignUpController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecaseimpl.CreateAccountByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.CreateAccountByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 public class SignUpControllerImpl implements SignUpController {
     @Override

@@ -1,4 +1,4 @@
-package ir.maktab.java32.projects.articlesmanagement.model;
+package ir.maktab.java32.projects.articlesmanagement.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -42,10 +42,8 @@ public class Article {
     private Boolean isPublished;
 
     @ManyToOne
-    @ToString.Exclude
     private Category category;
 
     @ManyToOne
-    @ToString.Exclude
     private User user;
 }

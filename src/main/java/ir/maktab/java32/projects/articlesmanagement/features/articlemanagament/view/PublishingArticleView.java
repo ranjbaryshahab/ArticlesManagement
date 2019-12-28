@@ -4,7 +4,7 @@ import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.c
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controllerimpl.PublishingArticleControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecaseimpl.FindArticleByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.FindArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 
 import java.util.Scanner;
 

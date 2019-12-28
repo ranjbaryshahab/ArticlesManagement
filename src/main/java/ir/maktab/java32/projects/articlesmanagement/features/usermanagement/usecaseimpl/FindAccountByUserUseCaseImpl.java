@@ -1,19 +1,14 @@
 package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecaseimpl;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Service;
-import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.HibernateUtil;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGeneric;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGenericImpl;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.FindAccountByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import ir.maktab.java32.projects.articlesmanagement.repositories.UserRepository;
 
 @Service
 @SuppressWarnings("Duplicates")
 public class FindAccountByUserUseCaseImpl implements FindAccountByUserUseCase {
-    CrudGeneric<User, Integer> crudGeneric = new CrudGenericImpl<>(User.class);
-
+    private UserRepository userRepository = UserRepository.getInstance();
     @Override
     public User findById(int id) throws FindAccountByUserFailedException {
         User user;
@@ -27,15 +22,7 @@ public class FindAccountByUserUseCaseImpl implements FindAccountByUserUseCase {
     }
 
     private User findUser(int id) {
-        User user;
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        CrudGenericImpl.setSession(session);
-        CrudGenericImpl.getSession().beginTransaction();
-        user = crudGeneric.findById(id);
-        CrudGenericImpl.getSession().getTransaction().commit();
-        CrudGenericImpl.getSession().close();
-        return user;
+        return userRepository.findById(id);
     }
 
     private void validate(int id) throws FindAccountByUserFailedException {

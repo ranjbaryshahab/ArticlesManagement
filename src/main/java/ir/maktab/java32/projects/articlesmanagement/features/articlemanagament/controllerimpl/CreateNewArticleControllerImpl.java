@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controller.CreateNewArticleController;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecaseimpl.CreateArticleByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.CreateArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 
 public class CreateNewArticleControllerImpl implements CreateNewArticleController {
     @Override

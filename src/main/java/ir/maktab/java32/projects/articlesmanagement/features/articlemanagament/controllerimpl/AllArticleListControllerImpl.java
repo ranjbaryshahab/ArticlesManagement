@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controller.AllArticleListController;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecaseimpl.FindAllArticleByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.FindAllArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 
 import java.util.List;
 

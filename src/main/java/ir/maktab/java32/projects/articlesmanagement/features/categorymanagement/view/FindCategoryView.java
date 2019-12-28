@@ -2,7 +2,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.categorymanagement
 
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controller.FindCategoryController;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controllerimpl.FindCategoryControllerImpl;
-import ir.maktab.java32.projects.articlesmanagement.model.Category;
+import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 
 import java.util.Scanner;
 

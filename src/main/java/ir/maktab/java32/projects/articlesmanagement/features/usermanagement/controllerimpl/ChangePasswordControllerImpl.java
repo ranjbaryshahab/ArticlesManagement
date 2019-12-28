@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.con
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.ChangePasswordController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecaseimpl.EditAccountByUserUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.EditAccountByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 public class ChangePasswordControllerImpl implements ChangePasswordController {
     @Override

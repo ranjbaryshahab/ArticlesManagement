@@ -1,20 +1,15 @@
 package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecaseimpl;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Service;
-import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.HibernateUtil;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGeneric;
-import ir.maktab.java32.projects.articlesmanagement.core.share.CrudGenericImpl;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.DeleteAccountByUserUseCase;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.FindAccountByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import ir.maktab.java32.projects.articlesmanagement.repositories.UserRepository;
 
 @Service
 @SuppressWarnings("Duplicates")
 public class DeleteAccountByUserUseCaseImpl implements DeleteAccountByUserUseCase {
-    CrudGeneric<User, Integer> crudGeneric = new CrudGenericImpl<>(User.class);
-
+    private UserRepository userRepository = UserRepository.getInstance();
     @Override
     public void delete(int id) throws DeleteAccountByUserFailedException {
         try {
@@ -28,13 +23,7 @@ public class DeleteAccountByUserUseCaseImpl implements DeleteAccountByUserUseCas
     }
 
     private void deleteUser(int id) {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        CrudGenericImpl.setSession(session);
-        CrudGenericImpl.getSession().beginTransaction();
-        crudGeneric.delete(id);
-        CrudGenericImpl.getSession().getTransaction().commit();
-        CrudGenericImpl.getSession().close();
+        userRepository.removeById(id);
     }
 
     private void validate(int id) throws DeleteAccountByUserFailedException, FindAccountByUserUseCase.FindAccountByUserFailedException {

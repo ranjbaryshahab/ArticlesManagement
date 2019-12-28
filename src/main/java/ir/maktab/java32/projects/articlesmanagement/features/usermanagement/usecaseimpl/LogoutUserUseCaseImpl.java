@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.use
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Service;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.LogoutByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 @Service
 public class LogoutUserUseCaseImpl implements LogoutByUserUseCase {

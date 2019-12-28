@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.vie
 import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.ChangePasswordController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.ChangePasswordControllerImpl;
-import ir.maktab.java32.projects.articlesmanagement.model.User;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 import java.util.Scanner;
 

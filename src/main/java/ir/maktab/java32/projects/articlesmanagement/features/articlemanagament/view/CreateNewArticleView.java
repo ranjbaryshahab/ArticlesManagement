@@ -6,8 +6,8 @@ import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.c
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.view.AllCategoryListView;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.view.CreateCategoryView;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.view.FindCategoryView;
-import ir.maktab.java32.projects.articlesmanagement.model.Article;
-import ir.maktab.java32.projects.articlesmanagement.model.Category;
+import ir.maktab.java32.projects.articlesmanagement.domain.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -24,7 +24,7 @@ public class CreateNewArticleView {
         article.setBrief(lineScanner.nextLine());
         System.out.println("Please enter content : ");
         article.setContent(lineScanner.nextLine());
-        System.out.println("Please enter content : ");
+        System.out.println("Please enter category : ");
         article.setContent(lineScanner.nextLine());
         FindCategoryView findCategoryView = new FindCategoryView();
         Category category = findCategoryView.find();

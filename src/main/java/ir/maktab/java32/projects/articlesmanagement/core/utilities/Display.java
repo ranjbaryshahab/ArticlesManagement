@@ -15,6 +15,7 @@ public class Display {
     public static String showUserMenu() {
         return """
                 +----------------------------+
+                |    Dashboard               |
                 |    My Articles             |
                 |    Edit Article            |
                 |    Create Article          |

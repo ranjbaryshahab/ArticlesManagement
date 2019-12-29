@@ -16,7 +16,7 @@ public class SignInControllerImpl implements SignInController {
         try {
             singIn = loginByUserUseCase.login(user);
         } catch (LoginByUserUseCase.LoginByUserFailedException e) {
-            System.out.println(e.getMessage()+"3");
+            System.out.println(e.getMessage());
         }
         return singIn;
     }

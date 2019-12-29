@@ -16,12 +16,22 @@ public class DeleteArticleByUserUseCaseImpl implements DeleteArticleByUserUseCas
 
     @Override
     public void delete(int id) throws DeleteArticleByUserFailedException {
+        FindArticleByUserUseCase findArticleByUserUseCase = new FindArticleByUserUseCaseImpl();
+        Article article = null;
         try {
-            validate(id);
-            deleteArticle(id);
-        } catch (DeleteArticleByUserFailedException | FindArticleByUserUseCase.FindArticleByUserFailedException e) {
+            article = findArticleByUserUseCase.findById(id);
+        } catch (FindArticleByUserUseCase.FindArticleByUserFailedException e) {
             throw new DeleteArticleByUserFailedException(e.getMessage());
         }
+        if(article.getUser().getUsername().equals(user.getUsername())) {
+            try {
+                validate(id);
+                deleteArticle(id);
+            } catch (DeleteArticleByUserFailedException | FindArticleByUserUseCase.FindArticleByUserFailedException e) {
+                throw new DeleteArticleByUserFailedException(e.getMessage());
+            }
+        }else
+            throw new DeleteArticleByUserFailedException("You can't delete this article!");
     }
 
     private void deleteArticle(int id) {
@@ -32,8 +42,5 @@ public class DeleteArticleByUserUseCaseImpl implements DeleteArticleByUserUseCas
         Article article = articleRepository.findById(id);
         if (article == null)
             throw new DeleteArticleByUserFailedException("It wasn't deleted !");
-        if (article.getUser().getUsername().equals(user.getUsername()))
-            throw new DeleteArticleByUserFailedException("You can't delete this article!");
-
     }
 }

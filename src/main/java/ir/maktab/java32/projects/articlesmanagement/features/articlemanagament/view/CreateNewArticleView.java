@@ -25,17 +25,16 @@ public class CreateNewArticleView {
         System.out.println("Please enter content : ");
         article.setContent(lineScanner.nextLine());
         System.out.println("Please enter category : ");
-        article.setContent(lineScanner.nextLine());
+        AllCategoryListView allCategoryListView = new AllCategoryListView();
+        allCategoryListView.allList();
         FindCategoryView findCategoryView = new FindCategoryView();
         Category category = findCategoryView.find();
         if (category == null) {
             System.out.println("This category is not exist, do you Create this category?(yes or no) if type no cancel create category!");
-            AllCategoryListView allCategoryListView = new AllCategoryListView();
-            allCategoryListView.allList();
             String command = lineScanner.nextLine();
             if (command.equals("yes")) {
                 CreateCategoryView createCategoryView = new CreateCategoryView();
-                createCategoryView.create();
+                category =createCategoryView.create();
             } else if (command.equals("no"))
                 state = false;
         }

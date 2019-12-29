@@ -7,6 +7,12 @@ import java.util.List;
 
 @UseCase
 public interface FindAllArticleByUserUseCase {
-    List<Article> findAll();
-    List<Article> findArticleByUser();
+    List<Article> findAll() throws FindAllArticleByUserFailedException;
+    List<Article> findAllArticleByUser() throws FindAllArticleByUserFailedException;
+
+    class FindAllArticleByUserFailedException extends Exception {
+        public FindAllArticleByUserFailedException(String message) {
+            super(message);
+        }
+    }
 }

@@ -30,9 +30,8 @@ public class ArticleRepository extends CrudRepository<Article, Integer> {
     public List<Article> findAllByUser() {
         User user = AuthenticationService.getInstance().getLoginUser();
         getSession().beginTransaction();
-        Query<Article> query = getSession()
-                .createQuery("from " + getEntityClass().getName() + " where User=:user", getEntityClass());
-        query.setParameter("user",user);
+        Query<Article> query = getSession().createQuery("from Article where user.username= :username",Article.class);
+        query.setParameter("username", user.getUsername());
         List<Article> articles = query.list();
         getSession().getTransaction().commit();
         return articles;

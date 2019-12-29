@@ -2,6 +2,7 @@ package ir.maktab.java32.projects.articlesmanagement.repositories;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.repositories.CrudRepository;
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -26,17 +27,16 @@ public class UserRepository extends CrudRepository<User, Integer> {
 
     public List<User> userLogin(User user) {
 
-        getSession().beginTransaction();
-        List dbPassword = getSession().createQuery("select password from User where username = :username")
-                .setParameter("username", user.getUsername())
-                .list();
-        List users = getSession().createQuery("from User where username= :username")
-                .setParameter("username", user.getPassword())
-                .list();
+        if (!getSession().getTransaction().isActive())
+            getSession().getTransaction().begin();
 
-        if (!(users.size() == 1 && user.getPassword().equals(dbPassword.get(0)))) {
+        Query query = getSession().createQuery("from User where username= :username and password=:password");
+        query.setParameter("username", user.getUsername());
+        query.setParameter("password", user.getPassword());
+        List<User> users = query.list();
+
+        if (users.size() != 1)
             return null;
-        }
 
         getSession().getTransaction().commit();
         return users;

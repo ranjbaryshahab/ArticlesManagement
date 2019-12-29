@@ -10,8 +10,8 @@ import java.util.List;
 
 public class UserArticleListControllerImpl implements UserArticleListController {
     @Override
-    public List<Article> myArticleList(User user) {
+    public List<Article> myArticleList(User user) throws FindAllArticleByUserUseCase.FindAllArticleByUserFailedException {
         FindAllArticleByUserUseCase findAllArticleByUserUseCase = new FindAllArticleByUserUseCaseImpl();
-        return findAllArticleByUserUseCase.findArticleByUser();
+        return findAllArticleByUserUseCase.findAllArticleByUser();
     }
 }

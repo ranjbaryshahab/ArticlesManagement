@@ -1,6 +1,7 @@
 package ir.maktab.java32.projects.articlesmanagement.core.utilities;
 
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.view.*;
+import ir.maktab.java32.projects.articlesmanagement.features.dashboard.view.UserDashboardView;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.LogoutController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.LogoutControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view.ChangePasswordView;
@@ -36,6 +37,10 @@ public class Menu {
         System.out.println(Display.showUserMenu());
         command = optionScanner.nextLine().toLowerCase();
         switch (command) {
+            case "dashboard" -> {
+                UserDashboardView dashboardView = new UserDashboardView();
+                dashboardView.dashboard();
+            }
             case "my articles" -> {
                 UserArticleListView userArticleListView = new UserArticleListView();
                 userArticleListView.list();

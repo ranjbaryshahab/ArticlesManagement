@@ -15,13 +15,16 @@ public class EditArticleByUserUseCaseImpl implements EditArticleByUserUseCase {
     @Override
     public Article edit(Article article) throws EditArticleByUserFailedException {
         Article editArticle;
-        try {
-            validate(article);
-            editArticle = updateArticle(article);
-        } catch (EditArticleByUserFailedException e) {
-            throw new EditArticleByUserFailedException(e.getMessage());
-        }
-        return editArticle;
+        if(article.getUser().getUsername().equals(user.getUsername())) {
+            try {
+                validate(article);
+                editArticle = updateArticle(article);
+            } catch (EditArticleByUserFailedException e) {
+                throw new EditArticleByUserFailedException(e.getMessage());
+            }
+            return editArticle;
+        }else
+            throw new EditArticleByUserFailedException("You can't edit this article!");
     }
 
     private Article updateArticle(Article article) {
@@ -46,10 +49,6 @@ public class EditArticleByUserUseCaseImpl implements EditArticleByUserUseCase {
 
         if (article.getContent().length() > 254)
             throw new EditArticleByUserFailedException("Content is bigger than 254 characters");
-
-        if (article.getUser().getUsername().equals(user.getUsername()))
-            throw new EditArticleByUserFailedException("You can't edit this article!");
-
     }
 
 }

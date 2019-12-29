@@ -9,7 +9,7 @@ import java.util.List;
 
 public class AllArticleListControllerImpl implements AllArticleListController {
     @Override
-    public List<Article> list() {
+    public List<Article> list() throws FindAllArticleByUserUseCase.FindAllArticleByUserFailedException {
         FindAllArticleByUserUseCase findAllArticleByUserUseCase = new FindAllArticleByUserUseCaseImpl();
         return findAllArticleByUserUseCase.findAll();
     }

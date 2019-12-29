@@ -13,12 +13,24 @@ public class FindAllArticleByUserUseCaseImpl implements FindAllArticleByUserUseC
     private ArticleRepository articleRepository = ArticleRepository.getInstance();
 
     @Override
-    public List<Article> findAll() {
+    public List<Article> findAll() throws FindAllArticleByUserFailedException {
+        validate();
         return articleRepository.findAll();
     }
 
     @Override
-    public List<Article> findArticleByUser() {
-            return articleRepository.findAllByUser();
+    public List<Article> findAllArticleByUser() throws FindAllArticleByUserFailedException {
+        validate();
+        return articleRepository.findAllByUser();
     }
+
+    private void validate() throws FindAllArticleByUserFailedException {
+        if (articleRepository.findAll() == null)
+            throw new FindAllArticleByUserFailedException("You're article list is empty!");
+
+        if (articleRepository.findAllByUser() == null)
+            throw new FindAllArticleByUserFailedException("You're article list is empty!");
+    }
+
+
 }

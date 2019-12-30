@@ -4,7 +4,7 @@ import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Servi
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.DeleteAccountByUserUseCase;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.usecases.FindAccountByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.repositories.UserRepository;
+import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.repositories.UserRepository;
 
 @Service
 @SuppressWarnings("Duplicates")

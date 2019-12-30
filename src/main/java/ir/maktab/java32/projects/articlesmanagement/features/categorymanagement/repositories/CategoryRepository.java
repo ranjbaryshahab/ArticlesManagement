@@ -1,4 +1,4 @@
-package ir.maktab.java32.projects.articlesmanagement.repositories;
+package ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.repositories;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.repositories.CrudRepository;
 import ir.maktab.java32.projects.articlesmanagement.domain.Category;

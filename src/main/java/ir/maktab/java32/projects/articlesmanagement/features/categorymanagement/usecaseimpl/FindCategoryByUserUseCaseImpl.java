@@ -3,7 +3,7 @@ package ir.maktab.java32.projects.articlesmanagement.features.categorymanagement
 import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Service;
 import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecases.FindCategoryByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.repositories.CategoryRepository;
+import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.repositories.CategoryRepository;
 
 @Service
 @SuppressWarnings("Duplicates")

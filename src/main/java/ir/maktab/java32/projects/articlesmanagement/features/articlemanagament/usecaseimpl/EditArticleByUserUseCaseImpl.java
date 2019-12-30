@@ -5,7 +5,7 @@ import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationSer
 import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.EditArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.repositories.ArticleRepository;
+import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.repositories.ArticleRepository;
 
 @Service
 @SuppressWarnings({"Duplicates", "unchecked"})

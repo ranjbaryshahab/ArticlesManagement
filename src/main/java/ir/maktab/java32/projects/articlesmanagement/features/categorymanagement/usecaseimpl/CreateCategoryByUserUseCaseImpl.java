@@ -4,7 +4,7 @@ import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Servi
 import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecases.CreateCategoryByUserUseCase;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecases.FindAllCategoryByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.repositories.CategoryRepository;
+import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.repositories.CategoryRepository;
 
 import java.util.List;
 

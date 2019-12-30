@@ -1,4 +1,4 @@
-package ir.maktab.java32.projects.articlesmanagement.repositories;
+package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.repositories;
 
 import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.repositories.CrudRepository;
 import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;

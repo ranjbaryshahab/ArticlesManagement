@@ -6,7 +6,7 @@ import ir.maktab.java32.projects.articlesmanagement.domain.Article;
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.DeleteArticleByUserUseCase;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.usecases.FindArticleByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.repositories.ArticleRepository;
+import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.repositories.ArticleRepository;
 
 @Service
 @SuppressWarnings("Duplicates")

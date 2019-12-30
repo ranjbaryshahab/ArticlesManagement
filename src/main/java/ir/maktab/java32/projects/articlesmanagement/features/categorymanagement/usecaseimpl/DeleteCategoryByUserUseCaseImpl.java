@@ -4,7 +4,7 @@ import ir.maktab.java32.projects.articlesmanagement.core.config.anotations.Servi
 import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecases.DeleteCategoryByUserUseCase;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.usecases.FindCategoryByUserUseCase;
-import ir.maktab.java32.projects.articlesmanagement.repositories.CategoryRepository;
+import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.repositories.CategoryRepository;
 
 @Service
 @SuppressWarnings("Duplicates")

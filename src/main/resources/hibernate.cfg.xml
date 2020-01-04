@@ -16,6 +16,8 @@
         <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Article"/>
         <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.User"/>
         <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Category"/>
+        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Role"/>
+        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Tag"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -1,19 +1,18 @@
 package ir.maktab.java32.projects.articlesmanagement.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@ToString
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,4 +45,26 @@ public class Article {
 
     @ManyToOne
     private User user;
+
+    @ManyToMany(cascade=CascadeType.ALL)
+    @JoinTable(name="article_tag", joinColumns={@JoinColumn(referencedColumnName="id")}
+            , inverseJoinColumns={@JoinColumn(referencedColumnName="id")})
+    private Set<Tag> tags = new HashSet<>();
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", brief='" + brief + '\'' +
+                ", content='" + content + '\'' +
+                ", createDate=" + createDate +
+                ", lastUpdateDate=" + lastUpdateDate +
+                ", publishDate=" + publishDate +
+                ", isPublished=" + isPublished +
+                ", category=" + category +
+                ", user=" + user +
+                ", tags=" + tags+
+                '}';
+    }
 }

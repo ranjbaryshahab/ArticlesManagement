@@ -1,13 +1,17 @@
 package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view;
 
+import ir.maktab.java32.projects.articlesmanagement.domain.Role;
+import ir.maktab.java32.projects.articlesmanagement.domain.User;
+import ir.maktab.java32.projects.articlesmanagement.features.rolemanagement.controllerimpl.FindRoleByAdminControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.SignUpController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.SignUpControllerImpl;
-import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class SignUpView {
     Scanner lineScanner = new Scanner(System.in);
@@ -25,8 +29,12 @@ public class SignUpView {
         } catch (ParseException e) {
             System.out.println(e.getMessage());
         }
-        User user = new User(null, username, nationalCode, birthday, nationalCode);
+        User user = new User(null, username, nationalCode, birthday, nationalCode,null);
         SignUpController signUpController = new SignUpControllerImpl();
+        Role role = new FindRoleByAdminControllerImpl().findById(2);
+        Set<Role> roles = new HashSet<>();
+        roles.add(role);
+        user.setRoles(roles);
         signUpController.signUp(user);
     }
 }

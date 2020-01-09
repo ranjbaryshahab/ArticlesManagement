@@ -40,7 +40,6 @@ public class Menu {
             case "create article" -> new CreateNewArticleUserView().create();
             case "change password" -> new ChangePasswordView().change();
             case "publish article" -> new PublishingArticleUserView().publish();
-            case "cancel publish article" -> new CancelPublishingArticleUserView().cancel();
             case "logout" -> new LogoutControllerImpl().logout();
         }
     }

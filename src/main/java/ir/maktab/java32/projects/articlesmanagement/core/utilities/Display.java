@@ -64,7 +64,6 @@ public class Display {
                 |    Edit Article               |
                 |    Create Article             |
                 |    Publish Article            |
-                |    Cancel Publish Article     |
                 |    Change Password            |
                 |    Logout                     |
                 +-------------------------------+

@@ -6,15 +6,23 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
 
-    private static SessionFactory sessionFactory;
-    private static Session session;
+    private static Session firstSession;
+
+    private static Session secondSession;
 
     static {
-        sessionFactory = new Configuration().configure().buildSessionFactory();
-        session = sessionFactory.openSession();
+        SessionFactory firstSessionFactory = new Configuration().configure("hibernate.db1.cfg.xml").buildSessionFactory();
+        firstSession = firstSessionFactory.openSession();
+
+        SessionFactory secondSessionFactory = new Configuration().configure("hibernate.db2.cfg.xml").buildSessionFactory();
+        secondSession = secondSessionFactory.openSession();
     }
 
-    public static Session getSession() {
-        return session;
+    public static Session getFirstSession() {
+        return firstSession;
+    }
+
+    public static Session getSecondSession() {
+        return secondSession;
     }
 }

@@ -1,7 +1,11 @@
 package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view;
 
+import ir.maktab.java32.projects.articlesmanagement.core.share.log.usecaseimpl.LogRecordUseCaseImpl;
+import ir.maktab.java32.projects.articlesmanagement.domain.Address;
+import ir.maktab.java32.projects.articlesmanagement.domain.Log;
 import ir.maktab.java32.projects.articlesmanagement.domain.Role;
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
+import ir.maktab.java32.projects.articlesmanagement.features.addressmanagement.view.AddAddressByUserView;
 import ir.maktab.java32.projects.articlesmanagement.features.rolemanagement.controllerimpl.FindRoleByAdminControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.SignUpController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.SignUpControllerImpl;
@@ -29,12 +33,19 @@ public class SignUpView {
         } catch (ParseException e) {
             System.out.println(e.getMessage());
         }
-        User user = new User(null, username, nationalCode, birthday, nationalCode,null);
+        AddAddressByUserView addAddressByUserView = new AddAddressByUserView();
+        Address address = addAddressByUserView.add();
+        User user = new User(null, username, nationalCode, birthday, nationalCode,null,address);
         SignUpController signUpController = new SignUpControllerImpl();
         Role role = new FindRoleByAdminControllerImpl().findById(2);
         Set<Role> roles = new HashSet<>();
         roles.add(role);
         user.setRoles(roles);
         signUpController.signUp(user);
+        new LogRecordUseCaseImpl().log(new Log(
+                null,
+                        user.getUsername(),
+                        new Date(),
+                        user.getUsername() + " is singing up"));
     }
 }

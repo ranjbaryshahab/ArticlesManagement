@@ -32,7 +32,7 @@ public class ArticlesManagementApplication {
 
 
                 if (admin && writer)
-                    Menu.adminWrirerMenu();
+                    Menu.adminWriterMenu();
                 else if (writer)
                     Menu.userMenu();
                 else if (admin)

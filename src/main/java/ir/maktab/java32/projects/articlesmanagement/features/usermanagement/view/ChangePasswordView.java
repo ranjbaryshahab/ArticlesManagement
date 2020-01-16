@@ -1,10 +1,13 @@
 package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view;
 
 import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
+import ir.maktab.java32.projects.articlesmanagement.core.share.log.usecaseimpl.LogRecordUseCaseImpl;
+import ir.maktab.java32.projects.articlesmanagement.domain.Log;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.ChangePasswordController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.ChangePasswordControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class ChangePasswordView {
@@ -25,6 +28,11 @@ public class ChangePasswordView {
                 ChangePasswordController changePasswordController = new ChangePasswordControllerImpl();
                 user.setPassword(confirmPassword);
                 changePasswordController.change(user);
+                new LogRecordUseCaseImpl().log(new Log(
+                        null,
+                        user.getUsername(),
+                        new Date(),
+                        user.getUsername() + " is changing password"));
             } else
                 System.out.println("Confirm password is wrong!!");
         } else

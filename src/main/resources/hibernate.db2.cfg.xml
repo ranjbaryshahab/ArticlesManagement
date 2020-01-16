@@ -5,7 +5,7 @@
         <property name="hibernate.connection.username">admin</property>
         <property name="hibernate.connection.password">Admin@1234</property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost/ArticlesManagement?createDatabaseIfNotExist=true
+            jdbc:mysql://localhost/ArticlesManagement2?createDatabaseIfNotExist=true
         </property>
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>
@@ -13,11 +13,6 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Mapping -->
-        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Article"/>
-        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.User"/>
-        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Category"/>
-        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Role"/>
-        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Tag"/>
-
+        <mapping class="ir.maktab.java32.projects.articlesmanagement.domain.Log"/>
     </session-factory>
 </hibernate-configuration>

@@ -30,7 +30,7 @@ public class CreateAccountByUserUseCaseImpl implements CreateAccountByUserUseCas
 
         FindAllAccountByAdminUseCase findAllAccountByAdminUseCase =
                 new FindAllAccountByAdminUseCaseImpl();
-        List<User> userList = findAllAccountByAdminUseCase.findAll();
+        List<User> userList = findAllAccountByAdminUseCase.findAllUser();
         boolean userExist=false;
         for(User user1 : userList){
             if(user1.getUsername().equals(user.getUsername())){

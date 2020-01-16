@@ -9,10 +9,7 @@ import ir.maktab.java32.projects.articlesmanagement.features.dashboard.view.User
 import ir.maktab.java32.projects.articlesmanagement.features.tagmanagement.view.AddTagByAdminView;
 import ir.maktab.java32.projects.articlesmanagement.features.tagmanagement.view.FindAllTagByAdminView;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.LogoutControllerImpl;
-import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view.ChangePasswordView;
-import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view.ChangeRoleAdminView;
-import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view.SignInView;
-import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view.SignUpView;
+import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view.*;
 
 import java.util.Scanner;
 
@@ -41,11 +38,12 @@ public class Menu {
             case "change password" -> new ChangePasswordView().change();
             case "publish article" -> new PublishingArticleUserView().publish();
             case "cancel publish article" -> new CancelPublishingArticleUserView().cancel();
+            case "find all articles of the field" -> new FindAllArticlesOfTheFieldByUserView().findAll();
             case "logout" -> new LogoutControllerImpl().logout();
         }
     }
 
-    public static void adminWrirerMenu() {
+    public static void adminWriterMenu() {
         System.out.println(Display.showAdminWriterMenu());
         command = optionScanner.nextLine().toLowerCase();
         switch (command) {
@@ -63,26 +61,32 @@ public class Menu {
             case "categories list" -> new AllCategoryListView().allList();
             case "publish article" -> new PublishingArticleAdminView().publish();
             case "cancel publish article" -> new CancelPublishingArticleAdminView().cancel();
+            case "show all users information" -> new FindAllUserInfo().findAll();
+            case "find all my articles of the field" -> new FindAllArticlesOfTheFieldByUserView().findAll();
+            case "find all articles of the field" -> new FindAllArticlesOfTheFieldByAdminView().findAll();
             case "logout" -> new LogoutControllerImpl().logout();
         }
     }
-        public static void adminMenu() {
-            System.out.println(Display.showAdminMenu());
-            command = optionScanner.nextLine().toLowerCase();
-            switch (command) {
-                case "dashboard" -> new AdminDashboardView().dashboard();
-                case "articles list" -> new AllArticleListAdminView().allList();
-                case "edit article" -> new EditUserArticleAdminView().edit();
-                case "add tag to article" -> new AddTagToArticleAdminView().addTag();
-                case "change category of article" -> new ChangeArticleCategoryAdminView().change();
-                case "create new tag" -> new AddTagByAdminView().addTag();
-                case "tags list" -> new FindAllTagByAdminView().findAll();
-                case "create new category" -> new CreateCategoryView().create();
-                case "categories list" -> new AllCategoryListView().allList();
-                case "publish article" -> new PublishingArticleAdminView().publish();
-                case "cancel publish article" -> new CancelPublishingArticleAdminView().cancel();
-                case "change role of user" -> new ChangeRoleAdminView().change();
-                case "logout" -> new LogoutControllerImpl().logout();
-            }
+
+    public static void adminMenu() {
+        System.out.println(Display.showAdminMenu());
+        command = optionScanner.nextLine().toLowerCase();
+        switch (command) {
+            case "dashboard" -> new AdminDashboardView().dashboard();
+            case "articles list" -> new AllArticleListAdminView().allList();
+            case "edit article" -> new EditUserArticleAdminView().edit();
+            case "add tag to article" -> new AddTagToArticleAdminView().addTag();
+            case "change category of article" -> new ChangeArticleCategoryAdminView().change();
+            case "create new tag" -> new AddTagByAdminView().addTag();
+            case "tags list" -> new FindAllTagByAdminView().findAll();
+            case "create new category" -> new CreateCategoryView().create();
+            case "categories list" -> new AllCategoryListView().allList();
+            case "publish article" -> new PublishingArticleAdminView().publish();
+            case "cancel publish article" -> new CancelPublishingArticleAdminView().cancel();
+            case "change role of user" -> new ChangeRoleAdminView().change();
+            case "show all users information" -> new FindAllUserInfo().findAll();
+            case "find all users of the field" -> new FindAllArticlesOfTheFieldByAdminView().findAll();
+            case "logout" -> new LogoutControllerImpl().logout();
         }
     }
+}

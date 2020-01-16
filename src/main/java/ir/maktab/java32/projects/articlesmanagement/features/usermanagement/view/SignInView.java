@@ -1,10 +1,13 @@
 package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.view;
 
 import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
+import ir.maktab.java32.projects.articlesmanagement.core.share.log.usecaseimpl.LogRecordUseCaseImpl;
+import ir.maktab.java32.projects.articlesmanagement.domain.Log;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controller.SignInController;
 import ir.maktab.java32.projects.articlesmanagement.features.usermanagement.controllerimpl.SignInControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class SignInView {
@@ -18,7 +21,13 @@ public class SignInView {
 
         SignInController signInController = new SignInControllerImpl();
         User user = signInController.signIn(username, password);
-        if (user != null)
+        if (user != null){
             AuthenticationService.getInstance().setLoginUser(user);
+            new LogRecordUseCaseImpl().log(new Log(
+                    null,
+                    user.getUsername(),
+                    new Date(),
+                    user.getUsername() + " is singing in"));
+        }
     }
 }

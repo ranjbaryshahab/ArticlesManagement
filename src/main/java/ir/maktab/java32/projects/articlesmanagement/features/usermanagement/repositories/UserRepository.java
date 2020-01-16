@@ -1,5 +1,6 @@
 package ir.maktab.java32.projects.articlesmanagement.features.usermanagement.repositories;
 
+import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.HibernateUtil;
 import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.repositories.CrudRepository;
 import ir.maktab.java32.projects.articlesmanagement.domain.User;
 import org.hibernate.query.Query;
@@ -8,9 +9,8 @@ import java.util.List;
 
 public class UserRepository extends CrudRepository<User, Integer> {
     private static UserRepository userRepository;
-
     private UserRepository() {
-
+        setSession(HibernateUtil.getFirstSession());
     }
 
     public static UserRepository getInstance() {

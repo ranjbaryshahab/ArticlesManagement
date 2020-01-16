@@ -1,5 +1,6 @@
 package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.repositories;
 
+import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.HibernateUtil;
 import ir.maktab.java32.projects.articlesmanagement.core.config.hibernate.repositories.CrudRepository;
 import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
 import ir.maktab.java32.projects.articlesmanagement.domain.Article;
@@ -10,9 +11,8 @@ import java.util.List;
 
 public class ArticleRepository extends CrudRepository<Article, Integer> {
     private static ArticleRepository articleRepository;
-
     private ArticleRepository() {
-
+        setSession(HibernateUtil.getFirstSession());
     }
 
     public static ArticleRepository getInstance() {

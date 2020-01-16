@@ -11,5 +11,25 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost/ArticlesManagement?createDatabaseIfNotExist=true</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.db2.cfg.xml/Hibernate" uuid="d2337cee-ee4e-4d7a-a7a6-36a9dbc7b6dd">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/home/shahab/Desktop/Maktab/Task/Shahab_Ranjbary_HW10_Maktab32/ArticlesManagement/src/main/resources/hibernate.db2.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost/ArticlesManagement2?createDatabaseIfNotExist=true</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.db1.cfg.xml/Hibernate" uuid="8e1c3aba-8754-4038-85b3-1d23b700b45b">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/home/shahab/Desktop/Maktab/Task/Shahab_Ranjbary_HW10_Maktab32/ArticlesManagement/src/main/resources/hibernate.db1.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost/ArticlesManagement?createDatabaseIfNotExist=true</jdbc-url>
+    </data-source>
   </component>
 </project>

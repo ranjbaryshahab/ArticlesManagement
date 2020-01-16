@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
+<module version="4">
   <component name="FacetManager">
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="8db3e9fe-1e88-422c-96cd-5802081e43f7" />
+          <unit-entry name="hibernate.db1.cfg.xml" value="8e1c3aba-8754-4038-85b3-1d23b700b45b" />
+          <unit-entry name="hibernate.db2.cfg.xml" value="d2337cee-ee4e-4d7a-a7a6-36a9dbc7b6dd" />
+          <unit-entry name="hibernate2.cfg.xml" value="8db3e9fe-1e88-422c-96cd-5802081e43f7" />
         </datasource-map>
         <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.db1.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.db2.cfg.xml" />
       </configuration>
     </facet>
   </component>

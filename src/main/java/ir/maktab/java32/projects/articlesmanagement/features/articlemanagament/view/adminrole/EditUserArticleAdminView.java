@@ -1,7 +1,9 @@
 package ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.view.adminrole;
 
 import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
+import ir.maktab.java32.projects.articlesmanagement.core.share.log.usecaseimpl.LogRecordUseCaseImpl;
 import ir.maktab.java32.projects.articlesmanagement.domain.Article;
+import ir.maktab.java32.projects.articlesmanagement.domain.Log;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controller.adminrole.EditUserArticleAdminController;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controller.adminrole.FindArticleAdminController;
 import ir.maktab.java32.projects.articlesmanagement.features.articlemanagament.controllerimpl.adminrole.EditUserArticleAdminControllerImpl;
@@ -47,6 +49,12 @@ public class EditUserArticleAdminView {
         if (category.equals("new")) {
             CreateCategoryView createCategoryView = new CreateCategoryView();
             createCategoryView.create();
+            new LogRecordUseCaseImpl().log(new Log(
+                    null,
+                    AuthenticationService.getInstance().getLoginUser().getUsername(),
+                    new Date(),
+                    AuthenticationService.getInstance().getLoginUser().getUsername() +
+                            article.getTitle() + " was edited"));
         } else if (!category.equals("*")) {
             article.setContent(category);
         }

@@ -1,9 +1,13 @@
 package ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.view;
 
+import ir.maktab.java32.projects.articlesmanagement.core.share.AuthenticationService;
+import ir.maktab.java32.projects.articlesmanagement.core.share.log.usecaseimpl.LogRecordUseCaseImpl;
+import ir.maktab.java32.projects.articlesmanagement.domain.Log;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controller.CreateNewCategoryController;
 import ir.maktab.java32.projects.articlesmanagement.features.categorymanagement.controllerimpl.CreateNewCategoryControllerImpl;
 import ir.maktab.java32.projects.articlesmanagement.domain.Category;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class CreateCategoryView {
@@ -20,6 +24,12 @@ public class CreateCategoryView {
         newCategory.setDescription(lineScanner.nextLine());
 
         newCategory = createNewCategoryController.create(newCategory);
+        new LogRecordUseCaseImpl().log(new Log(
+                null,
+                AuthenticationService.getInstance().getLoginUser().getUsername(),
+                new Date(),
+                AuthenticationService.getInstance().getLoginUser().getUsername() +
+                        " add " + newCategory.getTitle() + " category to system"));
         return newCategory;
     }
 }
